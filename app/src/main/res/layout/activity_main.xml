@@ -7,13 +7,51 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/buttonAddNewGrocery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="124dp"
+        android:background="#4CAF50"
+        android:backgroundTint="#4CAF50"
+        android:foregroundTint="#4CAF50"
+        android:onClick="addGrocery"
+        android:text="ADD GROCERY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#4CAF50" />
+
+    <ImageView
+        android:id="@+id/imageAlphabet"
+        android:layout_width="46dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.671"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_sort_alphabetically" />
+
+    <ImageView
+        android:id="@+id/imageTime"
+        android:layout_width="47dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGroceries"
+        android:layout_width="334dp"
+        android:layout_height="535dp"
+        android:layout_marginTop="36dp"
+        android:onClick="listGroceryInRecycleView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddNewGrocery" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
