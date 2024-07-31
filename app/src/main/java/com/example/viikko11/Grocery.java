@@ -10,6 +10,10 @@ public class Grocery {
         this.note = note;
     }
 
+    public Grocery() {
+
+    }
+
     public String getItem() {
         return item;
     }

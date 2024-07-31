@@ -1,5 +1,6 @@
 package com.example.viikko11;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -23,9 +24,10 @@ public class AddGroceryActivity extends AppCompatActivity {
         String note = ((EditText) findViewById(R.id.editGroceryNote)).getText().toString();
 
         Grocery grocery = new Grocery(item, note);
+        ListGrocery.getInstance().addGrocery(grocery);
 
-        ListGrocery list = ListGrocery.getInstance();
-        list.addGrocery(grocery);
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 }

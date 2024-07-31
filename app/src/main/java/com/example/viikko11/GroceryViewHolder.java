@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
             removeImage = itemView.findViewById(R.id.imageDelete);
             editImage = itemView.findViewById(R.id.imageEdit);
             editTextGroceryNote = itemView.findViewById(R.id.editTextGroceryNote);
+            System.out.println("viewholder");
         }
     }
 
